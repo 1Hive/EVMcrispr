@@ -17,7 +17,7 @@ const fetchPin = async (
     }
 
     return response.json();
-  } catch (e) {
+  } catch (_e) {
     throw new Error("Bad response from server");
   }
 };

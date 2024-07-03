@@ -4,7 +4,7 @@
 import type { SafeAppProvider } from "@safe-global/safe-apps-provider";
 import type { Opts } from "@safe-global/safe-apps-sdk";
 // @ts-ignore
-import type { type Connector } from "@wagmi/core";
+import type { Connector } from "@wagmi/core";
 import { ProviderNotFoundError, createConnector } from "@wagmi/core";
 import type { Evaluate } from "@wagmi/core/internal";
 import { getAddress, withTimeout } from "viem";

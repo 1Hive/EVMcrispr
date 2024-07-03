@@ -164,7 +164,7 @@ export class BindingsManager {
       } else {
         this.#bindings.add(binding);
       }
-    } catch (err) {
+    } catch (_err) {
       if (overwrite) {
         const b = this.#bindings.localLookup(binding.identifier, binding.type)!;
         b[0]!.value = binding.value;

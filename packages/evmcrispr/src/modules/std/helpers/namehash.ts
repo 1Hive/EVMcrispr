@@ -20,7 +20,7 @@ export const namehash: HelperFunction<Std> = async (
   try {
     normalize(name);
     return _namehash(name);
-  } catch (e) {
+  } catch (_e) {
     throw new Error(
       "Invalid ENS name. Please check the value you are passing to @namehash",
     );

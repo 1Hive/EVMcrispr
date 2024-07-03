@@ -69,7 +69,7 @@ export async function fetchImplementationAddress(
       abi,
       functionName: "implementation",
     });
-  } catch (e) {
+  } catch (_e) {
     implementationAddress = undefined;
     const beaconAddress = await getAddressFromStorageSlot(
       address,
@@ -83,7 +83,7 @@ export async function fetchImplementationAddress(
           abi,
           functionName: "implementation",
         });
-      } catch (err) {
+      } catch (_err) {
         implementationAddress = await client.readContract({
           address: beaconAddress,
           abi,

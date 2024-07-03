@@ -34,7 +34,7 @@ export const encodeAction = (
         : `function ${signature}`;
       fnABI = parseAbiItem(fullSignature) as AbiFunction;
     }
-  } catch (err) {
+  } catch (_err) {
     throw new ErrorInvalid(`Wrong signature format: ${signature}.`);
   }
 

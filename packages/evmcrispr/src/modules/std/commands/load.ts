@@ -83,7 +83,7 @@ export const load: ICommand<Std> = {
           moduleAlias,
         ),
       );
-    } catch (e) {
+    } catch (_e) {
       throw new ErrorException(`module ${moduleName} not found`);
     }
   },
@@ -151,7 +151,7 @@ export const load: ICommand<Std> = {
           MODULE,
         );
       };
-    } catch (err) {
+    } catch (_err) {
       return;
     }
   },

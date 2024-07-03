@@ -25,9 +25,7 @@ describe("Giveth > commands > donate <slug> <amount> <token>", () => {
 
     const interpreter2 = createInterpreter(
       `set $token.tokenlist https://tokens.honeyswap.org
-        exec @token(HNY) approve(address,uint) ${givethDonationRelayer.get(
-          100,
-        )} 1e18
+        exec @token(HNY) approve(address,uint) ${givethDonationRelayer.get(100)} 1e18
         exec ${givethDonationRelayer.get(
           100,
         )} sendDonation(address,address,uint256,uint256) @token(HNY) 0xeafFF6dB1965886348657E79195EB6f1A84657eB 1e18 1350`,

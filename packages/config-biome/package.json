@@ -1,0 +1,12 @@
+{
+  "name": "@repo/biome-config",
+  "version": "0.0.0",
+  "main": "biome.json",
+  "license": "MIT",
+  "dependencies": {
+    "@biomejs/biome": "^1.8.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

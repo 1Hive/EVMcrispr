@@ -1,30 +1,25 @@
 {
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "build": "turbo build",
     "changeset:release": "bun run build && changeset publish",
     "changeset:version": "changeset version && bun install --lockfile-only",
     "dev": "turbo dev",
-    "type-check": "turbo run type-check",
-    "lint": "turbo lint",
+    "check": "turbo run check",
     "test": "turbo test",
     "test:coverage": "turbo run test:coverage",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "biome format --write",
     "dev:terminal": "turbo run dev --filter=evmcrispr-terminal"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.6",
-    "eslint": "^8.57.0",
+    "@repo/biome-config": "*",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "prettier": "^3.2.5",
     "turbo": "^2.0.5"
   },
   "name": "evmcrispr-monorepo",
   "packageManager": "bun@1.1.4",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "workspaces": ["apps/*", "packages/*"]
 }

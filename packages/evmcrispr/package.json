@@ -10,9 +10,8 @@
   "module": "dist/index.mjs",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
-    "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@repo/prettier-config": "*",
+    "@repo/biome-config": "*",
     "@types/mocha": "^10.0.7",
     "@types/isomorphic-fetch": "^0.0.39",
     "@types/lodash.clonedeep": "^4.5.9",
@@ -23,9 +22,7 @@
     "ora": "^5.4.0",
     "is-ipfs": "^6.0.2",
     "hardhat": "^2.22.5",
-    "typescript": "^5.5.2",
     "dotenv": "^16.4.5",
-    "eslint": "^8.57.0",
     "ts-node": "^10.9.2",
     "tsup": "^6.0.0"
   },
@@ -39,17 +36,14 @@
   "peerDependencies": {
     "viem": "^2.16.2"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "chain": "hardhat node",
     "create-fixtures": "hardhat run scripts/create-fixtures.ts",
-    "lint": "eslint \"src/**/*.ts\"",
-    "type-check": "tsc --noEmit",
     "test": "hardhat test",
     "test:coverage": "nyc --reporter=lcov bun run test",
     "build": "tsup src/index.ts",
+    "check": "tsc --noEmit && biome check --write",
     "dev": "tsup src/index.ts --watch"
   }
 }

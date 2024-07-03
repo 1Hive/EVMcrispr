@@ -39,11 +39,8 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Lint code
-        run: bun lint
-
       - name: Check evmcrispr types
-        run: bun type-check
+        run: bun check
 
       - name: Tests
         if: steps.changed-files.outputs.any_changed == 'true'

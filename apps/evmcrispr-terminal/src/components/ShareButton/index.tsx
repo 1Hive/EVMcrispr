@@ -41,7 +41,7 @@ export default function ShareButton({ script, title }: ShareButtonProps) {
       });
       setLoading(false);
       navigate(`/terminal/${hash}`, { replace: true });
-    } catch (e) {
+    } catch (_e) {
       toast({
         description: "The script could not be saved to IPFS",
         status: "error",

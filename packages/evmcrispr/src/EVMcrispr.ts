@@ -287,7 +287,7 @@ export class EVMcrispr {
 
     try {
       leftOperand = BigInt(leftOperand_);
-    } catch (err) {
+    } catch (_err) {
       EVMcrispr.panic(
         n,
         `invalid left operand. Expected a number but got "${leftOperand_}"`,
@@ -296,7 +296,7 @@ export class EVMcrispr {
 
     try {
       rightOperand = BigInt(rightOperand_);
-    } catch (err) {
+    } catch (_err) {
       EVMcrispr.panic(
         n,
         `invalid right operand. Expected a number but got "${rightOperand_}"`,

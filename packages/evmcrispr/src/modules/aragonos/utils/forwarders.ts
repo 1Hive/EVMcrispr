@@ -24,7 +24,7 @@ export const isForwarder = async (
       abi: parseAbi(forwarderABI),
       functionName: "isForwarder",
     });
-  } catch (err) {
+  } catch (_err) {
     return false;
   }
 };
@@ -40,7 +40,7 @@ export const getForwarderFee = async (
       abi: parseAbi(forwarderABI),
       functionName: "forwardFee",
     });
-  } catch (err) {
+  } catch (_err) {
     return;
   }
 };
@@ -56,7 +56,7 @@ export const getForwarderType = async (
       abi: parseAbi(forwarderABI),
       functionName: "forwarderType",
     });
-  } catch (err) {
+  } catch (_err) {
     return FORWARDER_TYPES.NO_CONTEXT;
   }
 };
